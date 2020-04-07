@@ -105,6 +105,20 @@ logi1 <- c(T,TRUE,F,FALSE,FALSE)
 ```{r}
 sum(logi1)
 ```
+```{r}
+num <- c(1.5, 2, 3)
+int <- c(1L, 3L, -2L)
+char <- c("1.5","2","3")
+logi <- c(T,T,F)
+```
+
+
+```{r}
+class(num)
+class(int)
+class(char)
+class(logi)
+```
 
 ```{r}
 # 10位學生的主系
@@ -215,6 +229,21 @@ library(jsonlite) # 不少同學這行會有Error，還記得如何排除嗎？
 toJSON(commit)
 ```
 
+```{r}
+`今明氣象預報` <- list(
+  date = c(ymd("2020-03-31"),ymd("2020-04-01")),
+  `台北市` = list(
+    `最高溫` = 25,
+    `最低溫` = 18
+  ),
+  `新北市` = list(
+    `最高溫` = 24,
+    `最低溫` = 15
+  )
+)
+
+print(`今明氣象預報`)
+```
 
 ## R Markdown
 
